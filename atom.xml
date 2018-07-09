@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>宋博扬的小小屋</title>
+  
+  <subtitle>期望自己可以变得更好~</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://internsong.github.io/"/>
+  <updated>2018-07-08T16:00:45.286Z</updated>
+  <id>http://internsong.github.io/</id>
+  
+  <author>
+    <name>Boyang Song</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一次文章</title>
+    <link href="http://internsong.github.io/2018/07/08/my-new-post/"/>
+    <id>http://internsong.github.io/2018/07/08/my-new-post/</id>
+    <published>2018-07-08T15:52:24.000Z</published>
+    <updated>2018-07-08T16:00:45.286Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一次"><a href="#第一次" class="headerlink" title="第一次"></a>第一次</h2><p>搭建博客总算成功了!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;第一次&quot;&gt;&lt;a href=&quot;#第一次&quot; class=&quot;headerlink&quot; title=&quot;第一次&quot;&gt;&lt;/a&gt;第一次&lt;/h2&gt;&lt;p&gt;搭建博客总算成功了!&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://internsong.github.io/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://internsong.github.io/tags/blog/"/>
+    
+  </entry>
+  
+</feed>
