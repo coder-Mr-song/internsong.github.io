@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://internsong.github.io/"/>
-  <updated>2018-07-31T15:30:35.284Z</updated>
+  <updated>2018-08-16T09:34:56.271Z</updated>
   <id>http://internsong.github.io/</id>
   
   <author>
@@ -18,10 +18,38 @@
   
   <entry>
     <title>笔记</title>
+    <link href="http://internsong.github.io/2018/08/16/note02/"/>
+    <id>http://internsong.github.io/2018/08/16/note02/</id>
+    <published>2018-08-16T09:22:17.000Z</published>
+    <updated>2018-08-16T09:34:56.271Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>NIO</em>是new I/O的简称,它是jdk1.4被纳入的,具有以下特性:</p><p>1.NIO是基于块(block)的,它块为基本单位处理数据,在性能方面比流的方式好.</p><p>2.为所有原始数据提供缓存支持.</p><p>3.增加通道对象作为新的原始I/O对象.</p><p>4.支持锁和内存映射文件的文件访问接口.</p><p>5.提供了基于selector的异步网络I/O. NIO会将数据准备好后交由应用进行处理,数据的读写过程仍在应用线程中完成,只是将等待的时间剥离到了单独的线程中.</p><p><strong>NIO与AIO区别</strong></p><p>1.NIO是同步非阻塞的,AIO是异步非阻塞的.</p><p>2.NIO适用于读写时间较短的,AIO因为是读写过程完成后才通知,所以适用于读写过程长的. 序列化流:把对象按照流一样的方式存入到文本文件或网络中传输.</p><p><strong>反序列化流 </strong>:把文本文件中的流对象数据或网络中的流对象数据还原成对象 </p><p><strong>浅克隆</strong>:不会把对象也带着复制过去,只是复制了引用,但是会把基本数据类型复制过去.</p><p><strong>深克隆 </strong>:会把对象所有属性都复制过去. </p><p><strong>SSM框架原理，作用及使用方法作用</strong>：</p><p>SSM框架是spring MVC ，spring和mybatis框架的整合，是标准的MVC模式，将整个系统划分为表现层，controller层，service层，DAO层四层。使用spring MVC负责请求的转发和视图管理。spring实现业务对象管理，mybatis作为数据对象的持久化引擎。 </p><p><strong>SpringMVC原理 </strong>：</p><p>1.客户端发送请求到DispacherServlet（分发器）</p><p>2.由DispacherServlet控制器查询HanderMapping，找到处理请求的Controller</p><p>3.Controller调用业务逻辑处理后，返回ModelAndView</p><p>4.DispacherSerclet查询视图解析器，找到ModelAndView指定的视图</p><p>5.视图负责将结果显示到客户端 Spring：我们平时开发接触最多的估计就是IOC容器，它可以装载bean（也就是我们Java中的类，当然也包括service dao里面的），有了这个机制，我们就不用在每次使用这个类的时候为它初始化，很少看到关键字new。另外spring的aop，事务管理等等都是我们经常用到的。</p><p> <strong>Mybatis </strong>：mybatis是对jdbc的封装，它让数据库底层操作变的透明。mybatis的操作都是围绕一个sqlSessionFactory实例展开的。mybatis通过配置文件关联到各实体类的Mapper文件，Mapper文件中配置了每个类对数据库所需进行的sql语句映射。在每次与数据库交互时，通过sqlSessionFactory拿到一个sqlSession，再执行sql命令。 </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;em&gt;NIO&lt;/em&gt;是new I/O的简称,它是jdk1.4被纳入的,具有以下特性:&lt;/p&gt;
+&lt;p&gt;1.NIO是基于块(block)的,它块为基本单位处理数据,在性能方面比流的方式好.&lt;/p&gt;
+&lt;p&gt;2.为所有原始数据提供缓存支持.&lt;/p&gt;
+&lt;p&gt;3.增加通道对象作为新
+      
+    
+    </summary>
+    
+      <category term="note" scheme="http://internsong.github.io/categories/note/"/>
+    
+    
+      <category term="note" scheme="http://internsong.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记</title>
     <link href="http://internsong.github.io/2018/07/31/note01/"/>
     <id>http://internsong.github.io/2018/07/31/note01/</id>
     <published>2018-07-31T15:09:16.000Z</published>
-    <updated>2018-07-31T15:30:35.284Z</updated>
+    <updated>2018-08-16T09:32:51.817Z</updated>
     
     <content type="html"><![CDATA[<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p><em>将自己一天中学到的东西整理出来,看看自己一天学到了什么~</em></p><p><strong>hashMap与hashTable的区别</strong></p><p>1.hashtable基于dictionary类完成了map接口,hashmap继承abstractmap类完成了map接口.</p><p>2.hashtable是线程安全同步的,而hashmap则相反.</p><p>3.hashtable不允许null值,而hashmap允许.</p><p>4.hashtable中的hash数组默认大小是11,增长方式old*2+1hashmap中默认大小是16,增长方式是将容量扩张2倍. </p><p><strong>hashmap负载因子(加载因子)</strong>:加载因子是哈希表在其容量自动增加之前可以达到多满的一种尺度.</p><p><strong>hashmap大小</strong>=初始容量*负载因子,初始容量16,负载因子0.75.</p><p><strong>hashcode</strong>:哈希值,哈希值一样的元素会放到同一个区域这个区域叫做桶. </p><p><strong>Java内存机制</strong>:首先将内存分块，分为新生代，老年代和永久代。 永久代用来存放代码，等一些基本不改变的数据， 新生代用来存放刚产生的一些对象，新生代又可分为3块。分别为Edon区，Survivor0,survivor1,刚产生的对象是放在Edon区中，当这个区块放满了以后就将其存活的部分复制到survivor0块中，并且将Edon区中的数据清空，等到survivor0满了就将其中的存活的数据放到survivor1中，清空survivor0,垃圾回收到了一定次数还未被回收的对象，就可以放到老年区。一般来说，刚才产生的对象大多是要在下一次垃圾回收的时候就要被回收掉的，只有一小部分对象会被保留下来，这些被保留下来的对象都是比较稳定的，所以在老年区中的对象回收方法可以采用整理的方法，而在Edon区等新生代中采用复制的方法比较好。 </p><p><strong>Java内存清理算法</strong>:标记-清除算法采用从根集合进行扫描，对存活的对象对象标记，标记完毕后，再扫描整个空间中未被标记的对象，进行回收.</p><p>标记-清除算法不需要进行对象的移动，并且仅对不存活的对象进行处理，在存活对象比较多的情况下极为高效，但由于标记-清除算法直接回收不存活的对象，因此会造成内存碎片。</p><p>标记-整理算法标记-整理算法采用标记-清除算法一样的方式进行对象的标记，但在清除时不同，在回收不存活的对象占用的空间后，会将所有的存活对象往左端空闲空间移动，并更新对应的指针。标记-整理算法是在标记-清除算法的基础上，又进行了对象的移动，因此成本更高，但是却解决了内存碎片的问题。在基于Compacting算法的收集器的实现中，一般增加句柄和句柄表。</p><p>分代回收算法(Generational Collector)分代的垃圾回收策略，是基于这样一个事实：不同的对象的生命周期是不一样的。因此，不同生命周期的对象可以采取不同的回收算法，以便提高回收效率。 </p>]]></content>
     
