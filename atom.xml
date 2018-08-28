@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://internsong.github.io/"/>
-  <updated>2018-08-28T06:12:02.245Z</updated>
+  <updated>2018-08-28T08:25:31.731Z</updated>
   <id>http://internsong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TCP/UDP</title>
+    <link href="http://internsong.github.io/2018/08/28/note04/"/>
+    <id>http://internsong.github.io/2018/08/28/note04/</id>
+    <published>2018-08-28T08:21:04.000Z</published>
+    <updated>2018-08-28T08:25:31.731Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>TCP连接三次握手</strong>:</p><p>第一次握手：客户端发送syn包(syn=j)到服务器，并进入SYN_SEND状态，等待服务器确认；</p><p>第二次握手：服务器收到syn包，必须确认客户的SYN（ack=j+1），同时自己也发送一个SYN包（syn=k），即SYN+ACK包，此时服务器进入SYN_RECV状态；</p><p>第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ack=k+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。</p><p>握手过程中传送的包里不包含数据，三次握手完毕后，客户端与服务器才正式开始传送数据</p><p>断开连接时服务器和客户端均可以主动发起断开TCP连接的请求，断开过程需要经过“四次握手”</p><ol><li><p>第一次握手 : 你好, 我是A, 你能听到我说话吗</p></li><li><p>第二次握手 : 听到了, 我是B, 你能听到我说话吗</p></li><li><p>第三次握手 : 听到了, 我们可以开始聊天了 </p></li><li><p>三次握手其实就是为了检测双方的发送和接收能力是否正常 </p><p>TCP关闭四次连接</p><p>第一次挥手 : A告诉B, 我没数据发了, 准备关闭连接了, 你要发送数据吗</p><p>第二次挥手 : B发送最后的数据你应该知道的计算机网络知识</p><p>第三次挥手 : B告诉A, 我也要关闭连接了</p><p>第四次挥手 : A告诉B你可以关闭了, 我这边也关闭了 </p><p><strong>TCP与UDP区别</strong></p><p>TCP提供的是面向连接的、可靠的数据流传输；UDP提供的是非面向连接的、不可靠的数据流传输。TCP提供可靠的服务，通过TCP连接传送的数据，无差错、不丢失，不重复，按序到达；UDP尽最大努力交付，即不保证可靠交付。TCP面向字节流；UDP面向报文。TCP连接只能是点到点的；UDP支持一对一、一对多、多对一和多对多的交互通信。TCP首部开销20字节；UDP的首部开销小，只有8个字节。TCP的逻辑通信信道是全双工的可靠信道；UDP的逻辑通信信道是不可靠信道。 </p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;TCP连接三次握手&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;第一次握手：客户端发送syn包(syn=j)到服务器，并进入SYN_SEND状态，等待服务器确认；&lt;/p&gt;
+&lt;p&gt;第二次握手：服务器收到syn包，必须确认客户的SYN（ack=j+1），同时自己也发送一个
+      
+    
+    </summary>
+    
+      <category term="note" scheme="http://internsong.github.io/categories/note/"/>
+    
+    
+      <category term="note" scheme="http://internsong.github.io/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读有感</title>
