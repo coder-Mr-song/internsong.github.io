@@ -46,7 +46,7 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="宋博扬的小小屋">宋博扬的小小屋</a></h1>
-				<h2 class="blog-motto">期望自己可以变得更好~</h2>
+				<h2 id="blog-motto" class="blog-motto">期望自己可以变得更好~</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -443,6 +443,15 @@ $(document).ready(function(){
         
     }
   });
+  
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('blog-motto')
+      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      hitokoto.innerText = data.hitokoto
+    })
+    .catch(console.error)
 });
 </script>
 
